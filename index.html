@@ -1,9 +1,24 @@
 <html>
-  <head><title>Squirrel Cave</title></head>
+  <head>
+    <title>Squirrel Cave</title>
+    <style>
+      .fit {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      .slow-fade {
+        transition-name: fadeIn;
+        transition-duration: 10s;
+      }
+    </style>
+  </head>
   <body>
     <image src="./squirrel-cave.jpeg"
-    style="filter: saturate(0)"
-    onclick="event.target.style = 'filter: saturate(1); transition-name: fadeIn; transition-duration: 10s'"
+    class="fit slow-fade"
+    style="filter: saturate(0);"
+    onclick="event.target.style = 'filter: saturate(1);'"
     />
   </body>
 </html>
